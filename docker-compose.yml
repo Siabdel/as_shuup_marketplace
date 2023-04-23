@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  web:
+    container_name: as_shuup
+    build:
+      context: .
+    command: bash ./entrypoint.sh
+    ports:
+      - "8000:8000"
+    tty: true
+    restart: unless-stopped
